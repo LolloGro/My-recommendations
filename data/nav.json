@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Home",
+    "link": "/index"
+  },
+  {
+    "label": "Books",
+    "link": "/books"
+  },
+  {
+    "label": "Games",
+    "link": "/games"
+  },
+  {
+    "label": "About",
+    "link": "/about"
+  }
+]
