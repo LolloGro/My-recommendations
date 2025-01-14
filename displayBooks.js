@@ -17,6 +17,12 @@ export default class loadBooks {
       items.className = "books__items";
       items.innerText = a.titel;
       list.append(items);
+
+      const itemLabel = build.createElement("span");
+      itemLabel.className = "boooks__label";
+      itemLabel.innerText = "Author: " + a.author;
+      list.append(itemLabel);
+
     });
     return container;
   }

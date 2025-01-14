@@ -2,36 +2,36 @@
   {
     "id": 1,
     "titel": "En man som heter Ove",
-    "författare": "Fredrik Backman"
+    "author": "Fredrik Backman"
   },
   {
     "id": 2,
     "titel": "Folk med ångest",
-    "författare": "Fredrik Backman"
+    "author": "Fredrik Backman"
   },
   {
     "id": 3,
     "titel": "Britt-Marie var här",
-    "författare": "Fredrik Backman"
+    "author": "Fredrik Backman"
   },
   {
     "id": 4,
     "titel": "Mormor hälsar och säger förlåt",
-    "författare": "Fredrik Backman"
+    "author": "Fredrik Backman"
   },
   {
     "id": 5,
     "titel": "Mord överbord",
-    "författare": "Sofia Rutbäck Eriksson"
+    "author": "Sofia Rutbäck Eriksson"
   },
   {
     "id": 5,
     "titel": "Mord i storm",
-    "författare": "Sofia Rutbäck Eriksson"
+    "author": "Sofia Rutbäck Eriksson"
   },
   {
     "id": 5,
     "titel": "Döden på slottet",
-    "författare": "Sofia Rutbäck Eriksson"
+    "author": "Sofia Rutbäck Eriksson"
   }
 ]
