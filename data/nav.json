@@ -1,18 +1,22 @@
 [
   {
     "label": "Home",
-    "link": "/index"
+    "link": "/index",
+    "id": "index"
   },
   {
     "label": "Books",
-    "link": "/books"
+    "link": "/books",
+    "id": "books"
   },
   {
     "label": "Games",
-    "link": "/games"
+    "link": "/games",
+    "id": "games"
   },
   {
     "label": "About",
-    "link": "/about"
+    "link": "/about",
+    "id": "about"
   }
 ]

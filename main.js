@@ -2,19 +2,27 @@ import loadAPI from './loadAPI.js';
 import loadBooks from './displayBooks.js';
 import loadList from './displayGames.js';
 
-const backendBooks = new loadAPI("data/books.json");
-const books = await backendBooks.loadContent();
+const checkBooks = document.querySelector(".books");
 
-const booksDisplay = new loadBooks(books);
-const elemBooks = booksDisplay.render(document);
+if (checkBooks) {
+  const backendBooks = new loadAPI("data/books.json");
+  const books = await backendBooks.loadContent();
 
-document.querySelector(".books").append(elemBooks);
+  const booksDisplay = new loadBooks(books);
+  const elemBooks = booksDisplay.render(document);
 
-//DOSENT show
-/* const backendGames = new loadAPI("data/games.json");
-const spel = await backendGames.loadContent();
+  document.querySelector(".books").append(elemBooks);
+}
 
-const gamesDisplay = new loadList(spel);
-const elemGames = gamesDisplay.render(document);
+const checkGames = document.querySelector(".games");
 
-document.querySelector(".games").append(elemGames); */
+if (checkGames) {
+  const backendGames = new loadAPI("data/games.json");
+  const spel = await backendGames.loadContent();
+
+  const gamesDisplay = new loadList(spel);
+  const elemGames = gamesDisplay.render(document);
+
+  document.querySelector(".games").append(elemGames);
+}
+
