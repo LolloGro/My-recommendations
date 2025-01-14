@@ -1,50 +1,11 @@
 import express from 'express';
-import fs from 'fs/promises';
+import renderPage from './lib/renderpage.js';
+import { engine } from 'express-handlebars';
 
 const app = express();
-
-const menu = [
-  {
-    label: "Home",
-    link: "/index",
-    id: "index"
-  },
-  {
-    label: "Books",
-    link: "/books",
-    id: "books"
-  },
-  {
-    label: "Games",
-    link: "/games",
-    id: "games"
-  },
-  {
-    label: "About",
-    link: "/about",
-    id: "about"
-  }
-];
-
-async function renderPage(res, page) {
-  const buf = await fs.readFile(`./${page}.html`);
-  const text = buf.toString();
-
-  const templateBuf = await fs.readFile('./main.html');
-  const templateText = templateBuf.toString();
-
-  const menuNav = menu.map((item) => {
-    const className = item.id == page ? 'click' : 'inactive';
-    return `<li><a class="${className}" href="${item.link}">${item.label}</a></li>`;
-  });
-
-  const menuText = menuNav.join('\n');
-
-  const outPutHtml = templateText
-    .replace('%&BODY&%', text)
-    .replace('%&MENU&%', menuText);
-  res.send(outPutHtml);
-}
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './templates');
 
 app.get('/', async (req, res) => {
   renderPage(res, "index");
